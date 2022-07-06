@@ -5,7 +5,7 @@ import EventList from "../views/EventList.vue";
 import EventShow from "../views/EventShow.vue";
 
 Vue.use(VueRouter);
-
+// This is the routing for all the pages in the app which allows us to jump to different pages without constantly need to request from a server. Requests are handles directly in vue due to router
 const routes = [
   {
     path: "/",
@@ -26,6 +26,7 @@ const routes = [
 ];
 
 const router = new VueRouter({
+  //Instance for router being created
   mode: "history",
   base: process.env.BASE_URL,
   routes,

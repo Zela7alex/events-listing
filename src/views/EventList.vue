@@ -2,25 +2,26 @@
   <div>
     <h1>Events Listing</h1>
     <EventCard v-for="event in events" :key="event.id" :event="event" />
+    <!-- creates for loop that iterates through each event in events: data()-->
   </div>
 </template>
 
 <script>
 import EventCard from "@/components/EventCard.vue";
-import axios from "axios";
-
+import EventService from "@/services/EventService.js";
+// components being used must always be imported
 export default {
   components: {
-    EventCard,
+    EventCard, // register component
   },
   data() {
     return {
-      events: [],
+      events: [], // this is left empty to bring in json.response data objects
     };
   },
   created() {
-    axios
-      .get("http://localhost:3000/events")
+    // created() is a life cycle hook
+    EventService.getEvents() // This is now making api call from EventService.js/services (now each component can make axios call from that file instead of repeating the call in each component)
       .then((response) => {
         this.events = response.data;
       })

@@ -2,6 +2,7 @@
   <div id="app">
     <NavBar />
     <router-view />
+    <!-- All "views" aka pages and their components will now show here because of routing done in router-->
   </div>
 </template>
 
@@ -10,12 +11,13 @@ import NavBar from "@/components/NavBar.vue";
 
 export default {
   components: {
-    NavBar,
+    NavBar, // locally registering NavBar from components because it is not routed in router
   },
 };
 </script>
 
 <style>
+/* All of your main styles for project will be held here*/
 html {
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;

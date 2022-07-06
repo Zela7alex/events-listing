@@ -14,12 +14,13 @@
 <script>
 export default {
   props: {
-    event: Object,
+    event: Object, // This will bring in event object data from api call that can now be used in EventCard template above ^^^ ( this is being done by :event="evenyt" property in EventList.vue)
   },
 };
 </script>
 
 <style scoped>
+/* style for each component must be "scoped" otherwise it will be available in entire project*/
 .event-card {
   padding: 20px;
   margin-bottom: 24px;

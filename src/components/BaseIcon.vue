@@ -2,11 +2,12 @@
   <div class="icon-wrapper">
     <div class="icon-wrapper" v-html="svg"></div>
     <slot> </slot>
+    <!-- slots allow for slight differences in Base components while keeping all the properties/characteristics -->
   </div>
 </template>
 
 <script>
-import feather from "feather-icons";
+import feather from "feather-icons"; //feathers library
 export default {
   props: {
     name: String,
@@ -23,8 +24,8 @@ export default {
     svg() {
       return feather.icons[this.name].toSvg({
         class: "icon",
-        width: this.width, // new prop
-        height: this.height, // new prop
+        width: this.width, // new property
+        height: this.height, // new property
       });
     },
   },
