@@ -18,4 +18,4 @@ export default {
   },
 };
 
-//By creating this folder/file, every component in project now has access to axios call
+//* By creating this folder/file, every component in project now has access to axios api call

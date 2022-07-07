@@ -33,11 +33,11 @@ export default {
   props: ["id"],
   data() {
     return {
-      event: {}, // event stays empty to pull in event data from API call in EventServices.js
+      event: {}, //* event stays empty to pull in event data from API call in EventServices.js
     };
   },
   created() {
-    EventService.getEvent(this.id) // getEvent(id) is creating API instance to show data for each event using id property to identify it and grabbing the data into this component
+    EventService.getEvent(this.id) //*getEvent(id) is creating API instance to show data for each event using id property to identify it and grabbing the data into this component
       .then((response) => {
         this.event = response.data;
       })

@@ -14,7 +14,7 @@
 <script>
 export default {
   props: {
-    event: Object, // This will bring in event object data from api call that can now be used in EventCard template above ^^^ ( this is being done by :event="evenyt" property in EventList.vue)
+    event: Object, //* This will bring in event object data from api call that can now be used in EventCard template above ^^^ ( this is being done by :event="event" property in EventList.vue)
   },
 };
 </script>

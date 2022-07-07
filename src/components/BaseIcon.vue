@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import feather from "feather-icons"; //feathers library
+import feather from "feather-icons"; //feathers library that was installed
 export default {
   props: {
     name: String,

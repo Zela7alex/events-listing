@@ -9,19 +9,19 @@
 <script>
 import EventCard from "@/components/EventCard.vue";
 import EventService from "@/services/EventService.js";
-// components being used must always be imported
+//* 1st) components being used must always be imported
 export default {
   components: {
-    EventCard, // register component
+    EventCard, //* 2nd) register component
   },
   data() {
     return {
-      events: [], // this is left empty to bring in json.response data objects
+      events: [], //* this is left empty to bring in json.response data objects
     };
   },
   created() {
-    // created() is a life cycle hook
-    EventService.getEvents() // This is now making api call from EventService.js/services (now each component can make axios call from that file instead of repeating the call in each component)
+    //* created() is a life cycle hook
+    EventService.getEvents() //* This is now making api call from EventService.js/services (now each component can make axios call from that file instead of repeating the call in each individual component)
       .then((response) => {
         this.events = response.data;
       })

@@ -11,7 +11,7 @@ import NavBar from "@/components/NavBar.vue";
 
 export default {
   components: {
-    NavBar, // locally registering NavBar from components because it is not routed in router
+    NavBar, //* locally registering NavBar from components because it is not routed in router
   },
 };
 </script>
